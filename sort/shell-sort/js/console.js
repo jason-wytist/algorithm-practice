@@ -43,4 +43,18 @@ $(document).ready(function() {
   console.log('arr16 = [' + arr16 + ']');
 
   console.log('\n----------------------------------------------\n');
+  arr7  = [86,5,74,20,41,14,7];
+  console.log('shellSortOriginalASC arr7 = [' + arr7 + ']');
+  console.log('');
+  shellSortOriginalASC(arr7, console.log);
+  console.log('arr8 = [' + arr7 + ']');
+
+  console.log('\n----------------------------------------------\n');
+  arr7  = [86,5,74,20,41,14,7];
+  console.log('shellSortBasicASC arr7 = [' + arr7 + ']');
+  console.log('');
+  shellSortBasicASC(arr7, console.log);
+  console.log('arr7 = [' + arr7 + ']');
+
+  console.log('\n----------------------------------------------\n');
 });
