@@ -11,15 +11,13 @@ var shellSortBasicASC = function(arr, printHandler) {
       for (j=i; j>=d; j=j-d) {
         showCompMsg(); // FOR DEBUG
 
-        if(!(arr[j] < arr[j-d])) {
-          showArrOnlyComp(); // FOR DEBUG
-          break;
-        }
-
         if(arr[j] < arr[j-d]) {
           showSwapMsg(); // FOR DEBUG
           swapArray(arr, j, j-d);
           showArrAfterSwap(); // FOR DEBUG
+        } else {
+          showArrOnlyComp(); // FOR DEBUG
+          break;
         }
       }
     }
@@ -85,15 +83,13 @@ var shellSortBasicDESC = function(arr, printHandler) {
       for (j=i; j>=d; j=j-d) {
         showCompMsg(); // FOR DEBUG
 
-        if(!(arr[j] > arr[j-d])) {
-          showArrOnlyComp(); // FOR DEBUG
-          break;
-        }
-
         if(arr[j] > arr[j-d]) {
           showSwapMsg(); // FOR DEBUG
           swapArray(arr, j, j-d);
           showArrAfterSwap(); // FOR DEBUG
+        } else {
+          showArrOnlyComp(); // FOR DEBUG
+          break;
         }
       }
     }
