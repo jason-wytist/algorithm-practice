@@ -1,4 +1,21 @@
-var swapArray = function(arr, i, j) {
+function isIE () {
+  var myNav = navigator.userAgent.toLowerCase();
+  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+
+// IE8 이하 버전에 대한 polyfill
+if(isIE() && (isIE() < 9)) {
+  Array.prototype.indexOf = function (searchElement) {
+    for (var i = 0; i < this.length; i++) {
+      if(searchElement == this[i])
+        return i;
+    }
+
+    return -1;
+  };
+}
+
+function swapArray(arr, i, j) {
   var temp = arr[i];
   arr[i] = arr[j];
   arr[j] = temp;
