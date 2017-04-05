@@ -21,7 +21,12 @@ function swapArray(arr, i, j) {
   arr[j] = temp;
 };
 
-var generateArrayString = function(arr, hlPosArr=[], hlOpen='<', hlClose='>') {
+function generateArrayString(arr, hlPosArr, hlOpen, hlClose) {
+  if(!(arr instanceof Array)) return '[arr is not array]';
+  if(hlPosArr === undefined ) hlPosArr = [];
+  if(hlOpen   === undefined ) hlOpen   = '<';
+  if(hlClose  === undefined ) hlClose  = '>';
+
   var arrStr = '[';
   for (var i = 0; i < arr.length; i++) {
     if (hlPosArr.indexOf(i) != -1) {
